@@ -7,10 +7,6 @@ export const Signup = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        {/*{/<Appbar>/}*/}
-        {/*/!*    <Appbar.BackAction/>*!/*/}
-        {/*/!*    <Appbar.Content title="Signup"/>*!/*/}
-        {/*{/<Appbar>/}*/}
         <TextInput label="Name" />
         <TextInput label="Email" keyboardType="email-address" />
         <TextInput
