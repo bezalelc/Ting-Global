@@ -1,5 +1,5 @@
 import Header from '../Components/Header';
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import TingSelect from '../Components/TingSelect';
 import AppButton from '../Components/AppButton';
