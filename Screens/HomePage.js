@@ -21,50 +21,33 @@ const Page = () => {
           style={styleHomePage.image}
         />
       </View>
-      <View name={'FirstTable'} />
-      <View name={'Comments'} />
-      <View name={'Achievements'} />
-      <View name={'NavBar'}>
+      <View name={'FirstTable'}>
+        <Text style={styleHomePage.text}>
+          {'\n\t\t'}Table{'\n'}
+        </Text>
+      </View>
+      <View name={'Comments'}>
+        <Text style={styleHomePage.text}>
+          {'\n\t\t'}Comments{'\n'}
+        </Text>
+      </View>
+      <View name={'Achievements'}>
+        <Text style={styleHomePage.text}>
+          {'\n\t\t'}Achievements{'\n'}
+        </Text>
+      </View>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <View name={'NavBar'} style={{height: 50}}>
         <Tab.Navigator
           initialRouteName="LoginPage"
           screenOptions={{
             tabBarActiveTintColor: '#e91e63',
           }}>
-          <Tab.Screen
-            name="Login"
-            component={LoginPage}
-            // options={{
-            //   tabBarLabel: 'Home',
-            //   tabBarIcon: ({color, size}) => (
-            //     <MaterialCommunityIcons name="home" color={color} size={size} />
-            //   ),
-            // }}
-          />
-          <Tab.Screen
-            name="Page"
-            component={Page}
-            // options={{
-            //   tabBarLabel: 'Updates',
-            //   tabBarIcon: ({color, size}) => (
-            //     <MaterialCommunityIcons name="bell" color={color} size={size} />
-            //   ),
-            //   tabBarBadge: 3,
-            // }}
-          />
-          <Tab.Screen
-            name="Loginge"
-            component={LoginPage}
-            // options={{
-            //   tabBarLabel: 'Profile',
-            //   tabBarIcon: ({color, size}) => (
-            //     <MaterialCommunityIcons
-            //       name="account"
-            //       color={color}
-            //       size={size}
-            //     />
-            //   ),
-            // }}
-          />
+          <Tab.Screen name="Profile" component={LoginPage} />
+          <Tab.Screen name="Chat" component={LoginPage} />
+          <Tab.Screen name="Actions" component={LoginPage} />
+          <Tab.Screen name="International" component={LoginPage} />
+          <Tab.Screen name="accomplishments" component={LoginPage} />
         </Tab.Navigator>
       </View>
     </View>
@@ -86,6 +69,11 @@ const styleHomePage = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    height: '100%',
+  },
+  text: {
+    textAlign: 'center',
+    fontSize: 20,
   },
 });
 export default Page;
